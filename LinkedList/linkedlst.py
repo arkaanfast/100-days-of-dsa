@@ -1,3 +1,7 @@
+
+# A node for a single linked list
+
+
 class Node:
 
     def __init__(self, data, name):
@@ -34,10 +38,7 @@ def display_node(first_node):
         elif row == 4:
             print(" ", end="")
             print(first_node)
-
-        else:
-            print(" " * 3, end="")
-            print("|")
+            print()
 
 
 def display(first_node, num_of_nodes):
@@ -47,16 +48,18 @@ def display(first_node, num_of_nodes):
         first_node = first_node.next
 
 
-data_list = []
-num_of_nodes = int(input("Enter the number of nodes "))
-print("Enter the data as per the number of nodes you need ")
+# Implementation
 
-for i in range(num_of_nodes):
+# data_list = []
+# num_of_nodes = int(input("Enter the number of nodes "))
+# print("Enter the data as per the number of nodes you need ")
 
-    data_list.append(int(input("Enter the data value ")))
+# for i in range(num_of_nodes):
 
-first_node = Node(data_list[0], ("node " + str(0 + 1)))
+#     data_list.append(int(input("Enter the data value ")))
 
-make_list(data_list, 1, num_of_nodes, first_node)
+# first_node = Node(data_list[0], ("node " + str(0 + 1)))
 
-display(first_node, num_of_nodes)
+# make_list(data_list, 1, num_of_nodes, first_node)
+
+# display(first_node, num_of_nodes)

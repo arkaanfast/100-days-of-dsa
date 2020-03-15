@@ -1,3 +1,7 @@
+
+# A node of a Doubly linked list
+
+
 class Node:
 
     def __init__(self, data, name):
@@ -15,8 +19,8 @@ class Node:
 def make_dll(data, root_node, num, total_nodes):
 
     if num == total_nodes:
-        return "Done Converting"
-
+        print("Done converting")
+        return root_node.next
     else:
         new_node = Node(data[num], "node " + str(num + 1))
         root_node.next = new_node
