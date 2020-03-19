@@ -3,16 +3,16 @@
 
 class Tree_Node:
 
-    def __init__(self, data, name):
+    def __init__(self, data):
 
-        self.name = name
+        # self.name = name
         self.data = data
         self.left = None
         self.right = None
 
-    def __str(self):
+    # def __str(self):
 
-        return self.name
+    #     return self.name
 
 
 # root_node = Tree_Node(4, "node " + str(1))
