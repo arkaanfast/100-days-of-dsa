@@ -33,12 +33,13 @@ root = createMinimalTree(arr)
 # This method will create a minimal BST
 # The resulted tree will be as:-
 """  
-                        4
+                        5
 
-                2              6 
+                3              7
 
-            1       3      5       7
+            2              6       8
 
+        1      4
 """
 
 
