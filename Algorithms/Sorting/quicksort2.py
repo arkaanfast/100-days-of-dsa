@@ -29,5 +29,6 @@ def quicksort2(arr, low, high):
 
 
 arr = [1, 45, 98, 23, 45]
+print("Unsorted array => ", arr)
 quicksort2(arr, 0, len(arr) - 1)
-print(arr)
+print("Sorted array => ", arr)
