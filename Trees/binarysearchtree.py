@@ -11,17 +11,15 @@ class TreeNode:
 
 
 
-def convert_to_bst(numbers, low, high):
+def convert_to_bst(numbers):
 
     if not numbers:
         return None
 
-    if low < high:
-
-        mid = (low + high) // 2
-        node = TreeNode(numbers[mid])
-        node.left = convert_to_bst(numbers[low:mid], low, mid - 1)
-        node.right = convert_to_bst(numbers[mid + 1:high + 1], low, len(numbers) - (mid + 1) - 1) 
+    mid = (len(numbers)) // 2
+    node = TreeNode(numbers[mid])
+    node.left = convert_to_bst(numbers[:mid])
+    node.right = convert_to_bst(numbers[mid + 1:]) 
     return node
 
 
@@ -32,6 +30,6 @@ print("****Type in the Data values for your nodes****")
 list_of_data = list(map(int, input().split()))
 list_of_data.sort()
 
-root_node = convert_to_bst(list_of_data, 0, len(list_of_data) - 1)
+root_node = convert_to_bst(list_of_data)
 
 preorder_traversal(root_node)
