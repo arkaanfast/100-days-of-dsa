@@ -22,10 +22,6 @@ def convert_to_bst(numbers, low, high):
         node = TreeNode(numbers[mid])
         node.left = convert_to_bst(numbers[low:mid], low, mid - 1)
         node.right = convert_to_bst(numbers[mid + 1:high + 1], low, len(numbers) - (mid + 1) - 1) 
-
-    else:
-        mid = (low + high) // 2
-        node = TreeNode(numbers[mid])
     return node
 
 
