@@ -25,11 +25,11 @@ def convert_to_bst(numbers):
 
 
 
-print("Create your binary search tree ")
-print("****Type in the Data values for your nodes****")
-list_of_data = list(map(int, input().split()))
-list_of_data.sort()
+# print("Create your binary search tree ")
+# print("****Type in the Data values for your nodes****")
+# list_of_data = list(map(int, input().split()))
+# list_of_data.sort()
 
-root_node = convert_to_bst(list_of_data)
+# root_node = convert_to_bst(list_of_data)
 
-preorder_traversal(root_node)
+# preorder_traversal(root_node)
