@@ -10,26 +10,37 @@ class TreeNode:
         self.right = None
 
 
+class Tree:
 
-def convert_to_bst(numbers):
+    def __init__(self):
 
-    if not numbers:
-        return None
+        self.root = None
 
-    mid = (len(numbers)) // 2
-    node = TreeNode(numbers[mid])
-    node.left = convert_to_bst(numbers[:mid])
-    node.right = convert_to_bst(numbers[mid + 1:]) 
-    return node
+    
+    def add(self, root, node):
 
+        if root.data > node.data:
 
+            if root.left is None:
+                root.left = node
+            else:
+                self.add(root.left, node)
 
+        else: 
+            if root.right is None:
+                root.right = node
+            else:
+                self.add(root.right, node)
 
-# print("Create your binary search tree ")
-# print("****Type in the Data values for your nodes****")
-# list_of_data = list(map(int, input().split()))
-# list_of_data.sort()
+    
+    def add_root(self, data):
 
-# root_node = convert_to_bst(list_of_data)
+        node = TreeNode(data)
 
-# preorder_traversal(root_node)
+        if root is None:
+
+            self.root = node
+
+        else:
+
+            self.add(root, node)
