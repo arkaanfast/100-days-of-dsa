@@ -37,10 +37,10 @@ class Tree:
 
         node = TreeNode(data)
 
-        if root is None:
+        if self.root is None:
 
             self.root = node
 
         else:
 
-            self.add(root, node)
+            self.add(self.root, node)
