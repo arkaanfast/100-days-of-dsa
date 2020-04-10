@@ -75,8 +75,6 @@ class AvlTree:
     # Checks if tree is balanced or not 
     def check_balance(self, node):
 
-        print("in check balance")
-
         if self.height(node.left) - self.height(node.right) > 1 or self.height(node.left) - self.height(node.right) < -1:
 
             self.rebalance(node, node.data)
