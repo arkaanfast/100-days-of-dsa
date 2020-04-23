@@ -22,11 +22,11 @@ class MaxHeap:
 
     def has_left_child(self, index):
 
-        return True if self.get_left_child_index(index) < size else False
+        return True if self.get_left_child_index(index) < self.size else False
 
     def has_right_child(self, index):
 
-        return True if self.get_right_child_index(index) < size else False
+        return True if self.get_right_child_index(index) < self.size else False
 
     def has_parent(self, index):
 
